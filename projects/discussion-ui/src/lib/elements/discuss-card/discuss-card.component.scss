@@ -53,13 +53,15 @@
 
         .votes-content img,
         .views-content img {
-            height: 24px;
-            width: 24px;
+            // height: 24px;
+            // width: 24px;
+            height: 15px;
+            width: 20px;
         }
 
         .votes-content span,
         .views-content span {
-            margin-left: 0.5rem;
+            margin-left: 10px;
 
             html[dir="rtl"] & {
                 margin-right: 0.5rem;
@@ -68,10 +70,38 @@
     }
 
     .comments-count {
-        color: #0074b6;
+        // color: #0074b6;
         font-weight: 700;
+        color: rbga(0, 0, 0, 0.6);
     }
 }
+
+.discuss-card-header {
+    .user_name_div {
+        margin-bottom: 10px;
+        .circle-text {
+            border-radius: 4px;
+            width: 28px;
+            height: 28px;
+            // display: flex;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            background-color: #306933;
+            color: #fff;
+            text-align: center;
+            font-weight: 600;
+            line-height: 28px;
+        }
+
+        .discuss-user-label{
+            margin-left: 10px;
+            // color: rbga(0, 0, 0, 0.6)!important;
+           color: rgba(0, 0, 0, 0.6)!important;
+        }
+    }
+}
+
 
 .dot {
     height: 6px;
@@ -85,6 +115,7 @@
 .timing {
     color: #858181;
     margin-left: 1rem;
+    font-size: 14px;
 
     html[dir="rtl"] & {
         margin-right: 1rem;
@@ -98,3 +129,4 @@
         margin: 4px 8px;
     }
 }
+

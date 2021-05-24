@@ -64,13 +64,18 @@
 }
 
 .circle-text {
-    border-radius: 50%;
+    // border-radius: 50%;
+    border-radius: 4px 4px;
     width: 28px;
     height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(48, 105, 51);
+}
+
+.category-name {
+    color: #0074b6;
 }
 
 .circle-label {
@@ -97,6 +102,7 @@
 
 .vote-data {
     margin-left: 8px;
+    color: rgba(0, 0, 0, .6);
 
     html[dir="rtl"] & {
         margin-right: 0.5rem;
@@ -257,13 +263,14 @@
 }
 
 .comments-count {
-    color: #0074b6;
+    // color: #0074b6;
     font-weight: 700;
+    color: rgba(0, 0, 0, .6);
 }
 
 .viewsIcon{
-    height: 24px !important;
-    width: 24px !important;
+    height: 14px !important;
+    width: 18px !important;
     object-fit: cover;
     vertical-align: middle;
 }

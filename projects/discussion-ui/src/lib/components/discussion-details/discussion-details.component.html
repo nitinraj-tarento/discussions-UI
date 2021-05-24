@@ -4,6 +4,7 @@
       <div class="discuss-card-kabab-menu" role="link" tabindex="0">
         <!-- title -->
         <div class="discussion-card-title df-label-color" [innerHTML]="data?.title"></div>
+
         <div *ngIf="data?.uid === mainUid">
           <div class="kabab-menu" id="group-actions" (click)="onMenuClick()"></div>
           <div class="kabab-menu-dropdown-content" [hidden]="dropdownContent">
@@ -19,7 +20,7 @@
       <ng-container *ngFor="let post of data?.posts">
         <div *ngIf="post?.index === 0">
           <div class="post-reply-card">
-            <p role="link" tabindex="0" class="discussion-heading df-text-color" [innerHTML]="post?.content"></p>
+            <!-- username -->
             <div class="discussion-content" role="link" tabindex="0">
               <span class="circle-text"><span
                   class="circle-label">{{ post?.user?.username | splitInitials }}</span></span>
@@ -27,6 +28,15 @@
               <span class="discussion-labels" *ngIf="post.user.fullname" [innerHTML]="post.user.fullname"></span>
               <span class="discussion-labels" *ngIf="!post.user.fullname" [innerHTML]="post.user.username"></span>
             </div>
+
+            <p role="link" tabindex="0" class="discussion-heading df-text-color" [innerHTML]="post?.content"></p>
+            <!-- <div class="discussion-content" role="link" tabindex="0">
+              <span class="circle-text"><span
+                  class="circle-label">{{ post?.user?.username | splitInitials }}</span></span>
+              <span class="discussion-labels">{{'Asked by '}}</span>
+              <span class="discussion-labels" *ngIf="post.user.fullname" [innerHTML]="post.user.fullname"></span>
+              <span class="discussion-labels" *ngIf="!post.user.fullname" [innerHTML]="post.user.username"></span>
+            </div> -->
 
             <div class="tags" role="link" tabindex="0" aria-label="tags">
               <ng-container *ngIf="data && data?.tags && data?.tags?.length > 0">

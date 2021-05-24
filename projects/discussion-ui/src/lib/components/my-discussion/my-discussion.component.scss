@@ -10,7 +10,7 @@
     position: relative;
     padding: 16px;
     border-radius: 4px;
-    width: 100%;
+    width: 96.5%;
 }
 
 .profilecard-content {
@@ -33,17 +33,34 @@
 }
 
 .profile-name {
-    color: rgba(0, 0, 0, .54);
-    font-weight: 700;
-    margin-bottom: 8px;
-    font-size: 16px;
+    // color: rgba(0, 0, 0, .54);
+    // font-weight: 700;
+    // margin-bottom: 8px;
+    // font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 1.4;
 }
 
 .profile-label {
-    color: rgba(0, 0, 0, .54);
-    font-weight: 700;
-    margin-bottom: 8px;
+    // color: rgba(0, 0, 0, .54);
+    // font-weight: 700;
+    // margin-bottom: 8px;
+    // font-size: 14px;
+   
+    font-weight: 400;
+    margin-bottom: 5px;
     font-size: 14px;
+    line-height: 20px;
+}
+.profile-label.department_name {
+    color: rgba(0,0,0,.87);
+}
+
+.profile-label.location_name {
+    color: rgba(0,0,0,.6);
 }
 
 .info {
@@ -67,8 +84,10 @@
 }
 
 .number {
-    color: var(--blue);
+    // color: var(--blue);
     font-size: 14px;
+    color:#3F87C5;
+    font-weight: 700;
 }
 
 .labels {
@@ -88,6 +107,34 @@
     font-weight: bold;
 }
 
+.profileCard {
+    .profilecard-content {
+        margin-bottom: 5px;
+
+        .profile-header-image {
+            .box-text {
+                border-radius: 4px;
+                width: 28px;
+                height: 28px;
+                display: inline-block;
+                justify-content: center;
+                align-items: center;
+                // background-color: #306933;
+                color: #fff;
+                text-align: center;
+                font-weight: 600;
+                line-height: 28px;
+            }
+        }
+       
+
+        // .discuss-user-label{
+        //     margin-left: 10px;
+        // }
+    }
+}
+
+
 @media (max-width: 768px) {
     .profileCard {
         width: auto;
@@ -98,4 +145,17 @@
     font-size: 4rem;
     color: var(--white);
     text-transform: uppercase;
+}
+
+.tabs-filter {
+    .filter-option {
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+    }
+    .filter-option.tabs-active {
+        border-bottom: 3px solid var(--blue);
+      }
+}
+
+.recent-tabs {
+    padding: 15px 0 0 0!important;
 }

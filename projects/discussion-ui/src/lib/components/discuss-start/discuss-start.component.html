@@ -1,36 +1,44 @@
 <!--modals-->
-<div class="modal fade" id="myModal">
+<div class="modal fade post_comment_modal" id="myModal">
   <div class="discussion-start-modal">
     <div class="discussion-start-modal-content">
-      <form [formGroup]="startForm" class="discussion-start-form">
+      <form [formGroup]="startForm" class="discussion-start-form post_comment_form">
 
-        <div class="start-form-input" *ngIf="showSelectCategory" [ngClass]="{ 'is-invalid': showError('subTitle') }">
-          <label class="start-form-label">Select Category<span class="required"></span></label>
-          <div class="start-form-field">
-            <!-- <label>Select list</label> -->
-            <select formControlName="category" #category [required]="true" id="myList">
-              <option [value]="c.cid" *ngFor="let c of allCategories" [innerHTML]="c.name"></option>
-            </select>
-          </div>
-          <!-- <small class="text-error" *ngIf="showError('question')" i18n="category Error|Explains category is required">
-            category is mandatory</small> -->
-        </div>
+		
+		<div class="top_form_field_box">
 
-        <div class="start-form-field" [ngClass]="{ 'is-invalid': showError('subTitle') }">
-          <label class="start-form-label">Ask a question or post an idea<span class="required"></span></label>
+			<!-- select input field ====================-->
+			<div class="start-form-input select_form_field_box" *ngIf="showSelectCategory" [ngClass]="{ 'is-invalid': showError('subTitle') }">
+				<!-- <label class="start-form-label">Select Category<span class="required"></span></label> -->
+				<div class="start-form-field">
+					<!-- <label>Select list</label> -->
+					<select formControlName="category" #category [required]="true" id="myList" class="post_form_select">
+						<option value="none" selected>Select Category</option>
+						<option [value]="c.cid" *ngFor="let c of allCategories" [innerHTML]="c.name"></option>
+					</select>
+				</div>
+				<!-- <small class="text-error" *ngIf="showError('question')" i18n="category Error|Explains category is required">
+				category is mandatory</small> -->
+			</div>
+
+			<!-- right question box =========== -->
+			<div class="start-form-field text_form_field_box" [ngClass]="{ 'is-invalid': showError('subTitle') }">
+				<!-- <label class="start-form-label">Ask a question or post an idea<span class="required"></span></label> -->
+				<!-- <h1>this is test heading</h1> -->
+				<div>
+					<input class="start-form-field-control question_input_field" placeholder="Ask a question or post an idea"
+					formControlName="question" #question maxlength="1000" [required]="true" />
+				</div>
+				<!-- <small class="text-error" *ngIf="showError('question')"  i18n="question Error|Explains question is required">
+				Question is mandatory</small> -->
+			</div>
+		</div>
+
+        <div class="start-form-field textarea_form_field_box">
+          <!-- <label class="start-form-label">Please elaborate your question or idea here<span class="required"></span></label> -->
           <div>
-            <input class="start-form-field-control" placeholder="Ask a question or post an idea"
-              formControlName="question" #question maxlength="1000" [required]="true" />
-          </div>
-          <!-- <small class="text-error" *ngIf="showError('question')"  i18n="question Error|Explains question is required">
-            Question is mandatory</small> -->
-        </div>
-
-        <div class="start-form-field">
-          <label class="start-form-label">Please elaborate your question or idea here<span class="required"></span></label>
-          <div>
-            <textarea minlength="8" class="start-form-field-control" rows="8" formControlName="description" #description
-              name="moretext" placeholder="Type here..."></textarea>
+            <textarea minlength="8" class="start-form-field-control textarea_box" rows="8" formControlName="description" #description
+              name="moretext" placeholder="Please elaborate your question or idea here"></textarea>
           </div>
           <!-- <small class="text-error" *ngIf="showError('description')"
             i18n="description Error|Explains description is required"> Description is mandatory. It should be minimum of
@@ -38,7 +46,7 @@
         </div>
 
         <div #postTags [ngClass]="{ 'is-invalid': showError('tags') }" class="post-tags">
-          <label class="mb-0">Tags</label>
+          <label class="mb-0 start-form-label">Tags</label>
           <div *ngFor="let tag of postTagsArray">
             {{ tag }}
           </div>
@@ -62,7 +70,7 @@
           <button *ngIf="mode !== 'edit'" type="submit" class="df-btn df-submit-btn"
             [ngClass]="{'df-btn-disabled': !enableSubmitButton }" [disabled]="!enableSubmitButton"
             (click)="submitPost(startForm);logTelemetry($event)" id="submit-discussion-start-form">
-            <span class="text-white">Submit</span>
+            <span class="text-white">Submit Post</span>
           </button>
           <button *ngIf="mode === 'edit'" type="submit" class="df-btn df-update-btn"
             [ngClass]="{'df-btn-disabled': !enableSubmitButton }" [disabled]="!enableSubmitButton"
@@ -78,3 +86,5 @@
     </div>
   </div>
 </div>
+
+

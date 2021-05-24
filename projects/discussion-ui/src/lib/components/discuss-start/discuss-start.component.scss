@@ -21,7 +21,7 @@
 		border-radius: 3px;
 		background: var(--white);
 		position: absolute;
-		top: 50%;
+		top: 55%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		overflow: auto;
@@ -123,6 +123,8 @@
 	}
 }
 
+
+
 .post-tags {
 	margin-bottom: 1rem;
 }
@@ -132,20 +134,147 @@
 	opacity: 2 !important;
 }
 
+
+
+.ng2-tag-input, .ng2-tag-input[_ngcontent-xpm-c57] {
+	font-size: .8125rem;
+	display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    transition: .25s;
+    padding: .25rem 0;
+    min-height: 32px;
+    cursor: text;
+	border:1px solid #70707069!important; 
+    border-bottom: 1px solid #70707069!important;
+	font: 400 16px/24px Lato!important;
+}
+.ng2-tag-input__text-input{
+	font: 400 16px/24px Lato!important;
+	font-size: .8125rem!important;
+	width: 100%;
+	color: var(--gray-800) !important;
+	border:1px solid #70707069!important; 
+    border-bottom: 1px solid #70707069!important;
+}
+
+// .ng2-tag-input.ng2-tag-input--focuse {
+// 	border-bottom: 1px solid #70707069!important;
+// }
+
 ::ng-deep.ng2-tag-input {
-	border: .0625rem solid var(--gray-200) !important;
-	border-radius: .1875rem;
+	// border: .0625rem solid var(--gray-200) !important;
+	border:1px solid #70707069!important; 
+    border-bottom: 1px solid #70707069!important;
+	// border-radius: .1875rem;
 	color: var(--gray-800) !important;
 	display: block;
-	font-size: .8125rem !important;
+	// font-size: .8125rem !important;
+	border-radius: 4px 4px;
+	// color: rgba(0,0,0,.54);
 	max-width: 100%;
-	padding: 0.5rem 0;
+	// padding: 0.5rem 0;
+	outline: none;
+	padding: .25rem .5rem;
+	font: 400 16px/24px Lato!important;
 }
 
 ::ng-deep.ng2-tag-input--focused {
-	border-color: var(--primary-400) !important;
+	// border-color: var(--primary-400) !important;
+	border-color:#024f9d!important; 
 }
 
 .ng2-tag-input.active {
-	border-color: var(--primary-400) !important;
+	// border-color: var(--primary-400) !important;
+	border-color:#024f9d!important; 
 }
+
+.ng2-tag-input.ng2-tag-input--focused {
+	border-bottom: 1px solid #024f9d!important;
+}
+
+// .post_comment_modal {
+// 	border:3px solid red;
+// }
+// .post_comment_modal form.post_comment_form {
+// 	border:2px solid green;
+
+// }
+// .post_comment_modal form.post_comment_form .start-form-field input.start-form-field-control, .post_comment_modal form.post_comment_form .start-form-field textarea.start-form-field-control{
+// 	width: 98%;
+// 	max-width: 98%;
+// 	border: 1px solid #dedfe0;
+// 	outline: none;
+// 	border-radius: 4px 4px;
+// 	color: rgba(0,0,0,.54);
+// }
+
+.discussion-start-modal .discussion-start-modal-content .discussion-start-form .start-form-field {
+	margin-bottom: 1.5rem;
+}
+
+// .discussion-start-modal .discussion-start-modal-content .discussion-start-form .start-form-field .start-form-field-control {
+
+.discussion-start-modal .discussion-start-modal-content .discussion-start-form .start-form-field .textarea_box {	
+	width: 98%;
+	max-width: 98%;
+	border: 1px solid #70707069;
+	outline: none;
+	border-radius: 4px 4px;
+	// color: rgba(0,0,0,.54);
+	color: var(--gray-800) !important;
+	font: 400 16px/24px Lato;
+}
+
+
+.discussion-start-modal .discussion-start-modal-content .discussion-start-form .start-form-field .start-form-field-control .active, 
+.discussion-start-modal .discussion-start-modal-content .discussion-start-form .start-form-field .start-form-field-control:focus {
+	border-color: #024f9d!important;
+}
+
+.discussion-start-modal .discussion-start-modal-content .discussion-start-form .start-form-label {
+	margin-bottom: 10px;
+	font-size: 1em;
+	font-weight: normal;
+	font: 400 16px/24px Lato;
+}
+
+/************ select field box ************/
+
+.top_form_field_box {
+	width: 100%;
+	margin-bottom: 15px;
+}
+.select_form_field_box {
+	width: 250px;
+	display: inline-block;
+}
+select.post_form_select {
+	padding: 9px 6px;
+	// border: 1px solid #70707069;
+	border-radius: 4px 4px;
+	font: 400 16px/24px Lato;
+	background-color: #f0f0f0;
+}
+select.post_form_select:focus-visible  {
+	outline: none!important;
+	border: 1px solid #024f9d;
+}
+select.post_form_select::after {
+	margin-right: 6px;
+}
+select.post_form_select:focus {
+	border: 1px solid #024f9d;
+}
+.text_form_field_box {
+	width: calc(100% - 290px);
+	margin-left: 18px;
+	float: right;
+}
+
+.text_form_field_box input.question_input_field {
+	width:97%!important;
+}
+
+

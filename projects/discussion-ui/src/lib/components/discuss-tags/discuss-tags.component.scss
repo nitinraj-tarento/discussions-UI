@@ -38,7 +38,13 @@
 
 .tag {
 	cursor: pointer;
+
+	.count {
+		background-color: transparent!important;
+		color: #fff!important;
+	}
 }
+
 
 .search {
 	border: 1px solid #dedfe0;
@@ -50,6 +56,11 @@
     min-width: 320px;
     max-width: 50%;
 }
+
+.theme-igot.day-mode .ws-mat-default-text {
+	color:#fff;
+}
+
 
 @media (max-width: 768px) {
 	.discuss-tags {
